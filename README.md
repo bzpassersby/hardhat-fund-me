@@ -1,13 +1,13 @@
-# Sample Hardhat Project
+# A simple FundMe project that uses Chainlink Pricefeed
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+FundMe.sol
 
-Try running some of the following tasks:
+-Users call the core `fund()` function to send funds to the contract. Alternatively, the contract takes direct ether transfer through the `receive()` function when fund() is not directly invoked;
 
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+-All users's address and sent amount are saved and can be accessed through public `getAddressToAmountFunded(address)`
+
+-This contract imports Chainlink's `AggregatorV3Interface.sol` and invokes its `latestRoundData()` to get latest ETH price in USD.
+
+Install
+
+-Built with hardhat. To install dependencies, run `Yarn Install`.
