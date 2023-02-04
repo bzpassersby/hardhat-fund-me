@@ -1,4 +1,4 @@
-# A simple FundMe project that uses Chainlink Pricefeed
+# A FundMe project that uses Chainlink Pricefeed
 
 FundMe.sol
 
